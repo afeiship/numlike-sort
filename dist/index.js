@@ -12,7 +12,7 @@ exports.default = {
         attributes = _objectWithoutProperties(inProps, ['children']);
 
     var value = inProps.node.data.get('value');
-    switch (props.node.type) {
+    switch (inProps.node.type) {
       case 'alignment':
         return React.createElement('p', { style: { textAlign: value }, children: children });
       default:
