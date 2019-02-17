@@ -9,5 +9,8 @@ npm install -S afeiship/slate-plugin-alignment --registry=https://registry.npm.t
 
 ## usage:
 ```js
-//DOCS here!
+// left/center/right:
+editor.setBlocks({ type: 'alignment', data: { value: 'left' } });
+editor.setBlocks({ type: 'alignment', data: { value: 'center' } });
+editor.setBlocks({ type: 'alignment', data: { value: 'left' } });
 ```
