@@ -16,11 +16,6 @@ var _nextSlatePlugin2 = _interopRequireDefault(_nextSlatePlugin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * @usage:
- * Editor.addMark(editor,'bold', true)
- */
-
 exports.default = _nextSlatePlugin2.default.define({
   id: 'bold',
   hotkey: 'mod+b',
@@ -51,4 +46,7 @@ exports.default = _nextSlatePlugin2.default.define({
       children
     );
   }
-});
+}); /**
+     * @usage:
+     * Editor.addMark(editor,'bold', true)
+     */
