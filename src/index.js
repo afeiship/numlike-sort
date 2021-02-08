@@ -1,12 +1,28 @@
-export default {
-  renderNode(inProps, inEditor, inNext) {
-    const { children, ...attributes } = inProps;
-    const value = inProps.node.data.get('value');
-    switch (inProps.node.type) {
-      case 'alignment':
-        return <p style={{ textAlign: value }} children={children} />;
-      default:
-        return inNext();
+/**
+ * @usage:
+ * Editor.addMark(editor,'bold', true)
+ */
+
+import React from 'react';
+import { jsx } from 'slate-hyperscript';
+import NxSlatePlugin from '@jswork/next-slate-plugin';
+
+export default NxSlatePlugin.define({
+  id: 'bold',
+  hotkey: 'mod+b',
+  serialize: {
+    input: ({ el }, children) => {
+      const nodeName = el.nodeName.toLowerCase();
+      if (nodeName === 'span' && el.style.fontWeight === 'bold') {
+        return jsx('text', { bold: true }, children);
+      }
+    },
+    output: ({ el }) => {
+      el.style.fontWeight = 'bold';
+      return el;
     }
+  },
+  render: (_, { attributes, children, leaf }) => {
+    return <strong {...attributes}>{children}</strong>;
   }
-};
+});
