@@ -28,7 +28,8 @@ numlikeSort(['1a','3a','2a']);  // ['1a','2a','3a']
 numlikeSort(['a1a','a3a','a2a']);  // ['a1a','a2a','a3a']
 
 // custome iterator:
-numlikeSort(['pic1-2','pic1-3','pic1-1'], (item) => item.split('-')[1]);  // ['pic1-1','pic1-2','pic1-3']
+numlikeSort(['pic1-2','pic1-3','pic1-1'], (item) => item.split('-')[1]);  
+// ['pic1-1','pic1-2','pic1-3']
 ```
 
 ## license
