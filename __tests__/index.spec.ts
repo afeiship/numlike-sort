@@ -43,6 +43,20 @@ describe('api.basic', () => {
     ])
   });
 
+  // string of numbers with prefix and suffix:
+  // pic1pic,pic2pic,pic3pic
+  test('All of the numbers has prefix and suffix', () => {
+    const list = ['pic1pic', 'pic11pic', 'pic2pic', 'pic4pic', 'pic5pic', 'pic6pic',];
+    expect(fn(list)).toEqual([
+      'pic1pic',
+      'pic2pic',
+      'pic4pic',
+      'pic5pic',
+      'pic6pic',
+      'pic11pic',
+    ])
+  });
+
   // customised iterator
   test('Customised iterator can sort', () => {
     const list = ['pic-1', 'pic1-2', 'pic2-6', 'pic4-12', 'pic5-3', 'pic6-4',];
