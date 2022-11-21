@@ -1,6 +1,6 @@
 {
   "name": "@jswork/numlike-sort",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sort for numeric.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -42,6 +42,7 @@
   "homepage": "https://js.work",
   "keywords": [
     "number",
-    "sort"
+    "sort",
+    "numeric"
   ]
 }
